@@ -20,8 +20,8 @@ public class Array {
     }
 
     static void cycleSwap(int[] array, int shift) {
-        if (array == null) {
-            throw new NullPointerException("array must not be null");
+        if (array == null || shift >= 0) {
+            throw new NullPointerException("array and shift must not be null");
         }
         List<Integer> ints = new ArrayList<>();
         for (int i : array) {
@@ -59,8 +59,8 @@ public class Array {
     }
 
     static void cycleSwap1(int[] array, int shift) {
-        if (array == null) {
-            throw new NullPointerException("array must not be null");
+        if (array == null || shift >= 0) {
+            throw new NullPointerException("array and shift must not be null");
         }
         int rightIndexMove = array.length - shift;
         int[] tmpArr = new int[array.length];
