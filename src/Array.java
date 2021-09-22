@@ -14,6 +14,7 @@ public class Array {
 //        cycleSwap(array);
 //        cycleSwap(array, 2);
 //        cycleSwap1(array);
+//        cycleSwap1(array, 2);
         cycleSwap1(array, 2);
         System.out.println(Arrays.toString(array));
     }
@@ -61,6 +62,20 @@ public class Array {
         if (array == null) {
             throw new NullPointerException("array must not be null");
         }
+        int rightIndexMove = array.length - shift;
+        int[] tmpArr = new int[array.length];
+        int tmpIndex = 0;
+        while (tmpIndex < array.length) {
+            if (rightIndexMove > array.length - 1)
+                rightIndexMove = 0;
+            tmpArr[tmpIndex++] = array[rightIndexMove++];
+
+        }
+        int i = 0;
+        for (int k : tmpArr) {
+            array[i] = k;
+            i++;
+        }
     }
 
     public static double average(int[] array) {
@@ -83,4 +98,19 @@ public class Array {
         }
         return array;
     }
+
+//    static void cycleSwap1(int[] array, int shift) {
+//        if (array == null) {
+//            throw new NullPointerException("array must not be null");
+//        }
+//        int[] temp = Arrays.copyOf(array, array.length);
+//        int k = 0;
+//        for (int i = shift; i < temp.length - 1; i++) {
+//            array[k] = temp[i];
+//            k++;
+//        }
+//        for (int j = 0; j < shift - 1; j++) {
+//            array[k] = temp[j];
+//        }
+//    }
 }
