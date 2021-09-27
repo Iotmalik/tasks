@@ -22,7 +22,6 @@ public class Range {
         System.out.println(add(rangeA, rangeB));
     }
 
-
     public static Range comb(Range a, Range b) {
         if (a == null || b == null) {
             throw new IllegalArgumentException("Cannot be null!");

@@ -69,7 +69,6 @@ public class Array {
             if (rightIndexMove > array.length - 1)
                 rightIndexMove = 0;
             tmpArr[tmpIndex++] = array[rightIndexMove++];
-
         }
         int i = 0;
         for (int k : tmpArr) {
