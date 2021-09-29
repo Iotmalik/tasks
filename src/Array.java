@@ -59,7 +59,7 @@ public class Array {
     }
 
     static void cycleSwap1(int[] array, int shift) {
-        if (array == null || shift >= 0) {
+        if (array == null || shift <= 0) {
             throw new NullPointerException("array and shift must not be null");
         }
         int rightIndexMove = array.length - shift;

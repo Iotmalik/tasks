@@ -7,8 +7,8 @@ public class Test2 {
 //        cycleSwap(array);
 //        cycleSwap(array, 2);
 //        cycleSwap1(array);
-//        cycleSwap1(array, 2);
-        cycleSwap1(array);
+        cycleSwap1(array, 2);
+//        cycleSwap1(array);
         System.out.println(Arrays.toString(array));
     }
 
@@ -32,7 +32,7 @@ public class Test2 {
     }
 
     static void cycleSwap1(int[] array, int shift) {
-        if (array == null || shift >= 0) {
+        if (array == null || shift <= 0) {
             throw new NullPointerException("array and shift must not be null");
         }
         int i1 = array.length - shift;
